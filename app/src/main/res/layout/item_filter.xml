@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:elevation="2dp"
+    android:radius="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="#FAFAFA">
+
+        <!-- Filter Header with Controls -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvFilterTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Filter 1: 1000 Hz"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#2196F3" />
+
+                <TextView
+                    android:id="@+id/tvFilterType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Peaking"
+                    android:textSize="12sp"
+                    android:textColor="#666666" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnEditFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Edit"
+                android:textSize="11sp"
+                android:padding="4dp"
+                android:minWidth="60dp"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btnRemoveFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Remove"
+                android:textSize="11sp"
+                android:padding="4dp"
+                android:minWidth="60dp"
+                android:backgroundTint="#F44336" />
+
+        </LinearLayout>
+
+        <!-- Gain Control -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Gain:"
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+            <SeekBar
+                android:id="@+id/seekBarFilterGain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="40"
+                android:progress="20" />
+
+            <TextView
+                android:id="@+id/tvFilterGain"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="0 dB"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:gravity="end" />
+
+        </LinearLayout>
+
+        <!-- Q Factor Control -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Q:"
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+            <SeekBar
+                android:id="@+id/seekBarFilterQ"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="99"
+                android:progress="9" />
+
+            <TextView
+                android:id="@+id/tvFilterQ"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1.0"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:gravity="end" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
